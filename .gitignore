@@ -24,3 +24,27 @@
 
 # Plugin repositories are vendored as plain files for offline use.
 .local/share/nvim/lazy/**/.git/
+
+# Strip non-runtime plugin repository files from the offline vendor snapshot.
+.local/share/nvim/lazy/**/.github/
+.local/share/nvim/lazy/**/tests/
+.local/share/nvim/lazy/**/test/
+.local/share/nvim/lazy/**/spec/
+.local/share/nvim/lazy/**/specs/
+.local/share/nvim/lazy/**/.editorconfig
+.local/share/nvim/lazy/**/.gitattributes
+.local/share/nvim/lazy/**/.gitignore
+.local/share/nvim/lazy/**/.luacheckrc
+.local/share/nvim/lazy/**/.lua-format
+.local/share/nvim/lazy/**/.luarc*
+.local/share/nvim/lazy/**/.markdownlint*
+.local/share/nvim/lazy/**/.neoconf.json
+.local/share/nvim/lazy/**/.travis.yml
+.local/share/nvim/lazy/**/.stylua*
+.local/share/nvim/lazy/**/stylua.toml
+.local/share/nvim/lazy/**/selene.toml
+.local/share/nvim/lazy/**/Makefile
+.local/share/nvim/lazy/**/README*
+.local/share/nvim/lazy/**/CHANGELOG*
+.local/share/nvim/lazy/**/CONTRIBUTING*
+.local/share/nvim/lazy/**/TODO*

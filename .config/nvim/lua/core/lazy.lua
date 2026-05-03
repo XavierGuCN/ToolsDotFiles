@@ -18,6 +18,7 @@ require("lazy").setup({
   { import = "plugins.colorscheme" },
   { import = "plugins.editor" },
   { import = "plugins.search" },
+  { import = "plugins.verilog" },
 }, {
   change_detection = {
     notify = false,

@@ -27,7 +27,10 @@ opt.hlsearch = true
 opt.expandtab = true
 opt.shiftwidth = 2
 opt.tabstop = 2
-opt.smartindent = true
+opt.autoindent = true
 opt.undofile = true
 opt.clipboard = "unnamedplus"
 opt.completeopt = { "menu", "menuone", "noselect" }
+
+vim.cmd("filetype plugin indent on")
+vim.cmd("syntax enable")
