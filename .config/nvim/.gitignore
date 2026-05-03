@@ -1,0 +1,8 @@
+lua/local/
+.plugin/
+.cache/
+sessions/
+shada/
+swap/
+undo/
+view/

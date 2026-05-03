@@ -1,0 +1,16 @@
+# Ignore everything by default. Opt in only the configs we intentionally sync.
+*
+
+!/.gitignore
+!/README.md
+
+!/nvim/
+!/nvim/**
+
+!/tmux/
+!/tmux/**
+
+!/yazi/
+!/yazi/**
+
+!/starship.toml

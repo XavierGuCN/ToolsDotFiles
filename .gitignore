@@ -1,0 +1,26 @@
+# Ignore everything by default. Opt in only the dotfiles and vendored runtime
+# files that are needed to reproduce the CLI environment.
+*
+
+!/.gitignore
+!/README.md
+
+!/.config/
+!/.config/.gitignore
+!/.config/README.md
+!/.config/nvim/
+!/.config/nvim/**
+!/.config/tmux/
+!/.config/tmux/**
+!/.config/starship.toml
+
+!/.local/
+!/.local/share/
+!/.local/share/nvim/
+!/.local/share/nvim/lazy/
+!/.local/share/nvim/lazy/**
+!/.local/share/nvim/site/
+!/.local/share/nvim/site/**
+
+# Plugin repositories are vendored as plain files for offline use.
+.local/share/nvim/lazy/**/.git/
