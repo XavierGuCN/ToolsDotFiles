@@ -2,14 +2,14 @@ local group = vim.api.nvim_create_augroup("user_config", { clear = true })
 
 vim.filetype.add({
   extension = {
-    v = "verilog_systemverilog",
-    vh = "verilog_systemverilog",
-    vp = "verilog_systemverilog",
-    sv = "verilog_systemverilog",
-    svi = "verilog_systemverilog",
-    svh = "verilog_systemverilog",
-    svp = "verilog_systemverilog",
-    sva = "verilog_systemverilog",
+    v = "verilog",
+    vh = "verilog",
+    vp = "verilog",
+    sv = "systemverilog",
+    svi = "systemverilog",
+    svh = "systemverilog",
+    svp = "systemverilog",
+    sva = "systemverilog",
   },
 })
 
@@ -22,9 +22,10 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 
 vim.api.nvim_create_autocmd("FileType", {
   group = group,
-  pattern = "verilog_systemverilog",
+  pattern = { "verilog", "systemverilog" },
   callback = function(args)
     vim.bo[args.buf].smartindent = false
     vim.bo[args.buf].autoindent = true
+    pcall(vim.treesitter.start, args.buf, "v")
   end,
 })

@@ -8,6 +8,7 @@ local treesitter_languages = {
   "python",
   "query",
   "regex",
+  "v",
   "vim",
   "vimdoc",
 }
@@ -112,6 +113,63 @@ return {
         enabled = true,
       },
     },
+  },
+  {
+    "tpope/vim-endwise",
+    event = "InsertEnter",
+  },
+  {
+    "jiangmiao/auto-pairs",
+    event = "InsertEnter",
+    init = function()
+      vim.g.AutoPairsShortcutToggle = ""
+      vim.g.AutoPairsShortcutFastWrap = ""
+      vim.g.AutoPairsShortcutJump = ""
+      vim.g.AutoPairsShortcutBackInsert = ""
+    end,
+  },
+  {
+    "preservim/nerdcommenter",
+    keys = {
+      { "<leader>cc", "<plug>NERDCommenterComment", mode = { "n", "x" }, desc = "Comment" },
+      { "<leader>cu", "<plug>NERDCommenterUncomment", mode = { "n", "x" }, desc = "Uncomment" },
+      { "<leader>ct", "<plug>NERDCommenterToggle", mode = { "n", "x" }, desc = "Toggle comment" },
+    },
+    init = function()
+      vim.g.NERDSpaceDelims = 1
+      vim.g.NERDTrimTrailingWhitespace = 1
+      vim.g.NERDDefaultAlign = "left"
+    end,
+  },
+  {
+    "godlygeek/tabular",
+    cmd = "Tabularize",
+  },
+  {
+    "dense-analysis/ale",
+    event = { "BufReadPost", "BufNewFile" },
+    init = function()
+      vim.g.ale_disable_lsp = 1
+      vim.g.ale_completion_enabled = 0
+      vim.g.ale_fix_on_save = 0
+      vim.g.ale_lint_on_text_changed = "normal"
+      vim.g.ale_lint_delay = 500
+      vim.g.ale_sign_error = "E"
+      vim.g.ale_sign_warning = "W"
+      vim.g.ale_virtualtext_cursor = 1
+      vim.g.ale_echo_msg_format = "[%linter%] %s"
+    end,
+  },
+  {
+    "luochen1990/rainbow",
+    event = { "BufReadPost", "BufNewFile" },
+    init = function()
+      vim.g.rainbow_active = 1
+    end,
+  },
+  {
+    "itchyny/vim-cursorword",
+    event = { "BufReadPost", "BufNewFile" },
   },
   {
     "nvim-treesitter/nvim-treesitter",

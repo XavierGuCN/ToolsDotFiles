@@ -27,10 +27,13 @@
 
 # Strip non-runtime plugin repository files from the offline vendor snapshot.
 .local/share/nvim/lazy/**/.github/
+.local/share/nvim/lazy/**/demo/
+.local/share/nvim/lazy/**/docs/
 .local/share/nvim/lazy/**/tests/
 .local/share/nvim/lazy/**/test/
 .local/share/nvim/lazy/**/spec/
 .local/share/nvim/lazy/**/specs/
+.local/share/nvim/lazy/**/.appveyor.yml
 .local/share/nvim/lazy/**/.editorconfig
 .local/share/nvim/lazy/**/.gitattributes
 .local/share/nvim/lazy/**/.gitignore
@@ -40,11 +43,19 @@
 .local/share/nvim/lazy/**/.markdownlint*
 .local/share/nvim/lazy/**/.neoconf.json
 .local/share/nvim/lazy/**/.travis.yml
+.local/share/nvim/lazy/**/.vintrc*
 .local/share/nvim/lazy/**/.stylua*
 .local/share/nvim/lazy/**/stylua.toml
 .local/share/nvim/lazy/**/selene.toml
+.local/share/nvim/lazy/**/AGENTS.md
+.local/share/nvim/lazy/**/Dockerfile
+.local/share/nvim/lazy/**/LICENSE*
 .local/share/nvim/lazy/**/Makefile
+.local/share/nvim/lazy/**/NOTICE
 .local/share/nvim/lazy/**/README*
 .local/share/nvim/lazy/**/CHANGELOG*
+.local/share/nvim/lazy/**/Changelog*
 .local/share/nvim/lazy/**/CONTRIBUTING*
+.local/share/nvim/lazy/**/run-tests*
+.local/share/nvim/lazy/**/supported-tools.md
 .local/share/nvim/lazy/**/TODO*
