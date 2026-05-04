@@ -24,7 +24,7 @@ return {
     opts = {
       options = {
         theme = "gruvbox",
-        globalstatus = true,
+        globalstatus = false,
         component_separators = "",
         section_separators = "",
       },
@@ -170,6 +170,17 @@ return {
   {
     "itchyny/vim-cursorword",
     event = { "BufReadPost", "BufNewFile" },
+  },
+  {
+    "mg979/vim-visual-multi",
+    event = { "BufReadPost", "BufNewFile" },
+    init = function()
+      vim.g.VM_maps = {
+        ["Find Under"] = "<C-n>",
+        ["Find Subword Under"] = "<C-n>",
+        ["Select All"] = "<Leader>ma",
+      }
+    end,
   },
   {
     "nvim-treesitter/nvim-treesitter",

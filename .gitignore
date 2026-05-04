@@ -57,5 +57,7 @@
 .local/share/nvim/lazy/**/Changelog*
 .local/share/nvim/lazy/**/CONTRIBUTING*
 .local/share/nvim/lazy/**/run-tests*
+.local/share/nvim/lazy/**/run_tests*
 .local/share/nvim/lazy/**/supported-tools.md
+.local/share/nvim/lazy/**/tutorialrc
 .local/share/nvim/lazy/**/TODO*
