@@ -2,7 +2,6 @@ local opt = vim.opt
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
-vim.g.verilog_highlight_provider = vim.g.verilog_highlight_provider or "treesitter"
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 

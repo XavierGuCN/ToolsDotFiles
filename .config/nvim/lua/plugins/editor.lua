@@ -8,7 +8,6 @@ local treesitter_languages = {
   "python",
   "query",
   "regex",
-  "v",
   "vim",
   "vimdoc",
 }
@@ -115,12 +114,8 @@ return {
     },
   },
   {
-    "tpope/vim-endwise",
-    event = "InsertEnter",
-  },
-  {
     "jiangmiao/auto-pairs",
-    event = "InsertEnter",
+    lazy = false,
     init = function()
       vim.g.AutoPairsShortcutToggle = ""
       vim.g.AutoPairsShortcutFastWrap = ""
@@ -158,13 +153,6 @@ return {
       vim.g.ale_sign_warning = "W"
       vim.g.ale_virtualtext_cursor = 1
       vim.g.ale_echo_msg_format = "[%linter%] %s"
-    end,
-  },
-  {
-    "luochen1990/rainbow",
-    event = { "BufReadPost", "BufNewFile" },
-    init = function()
-      vim.g.rainbow_active = 1
     end,
   },
   {
